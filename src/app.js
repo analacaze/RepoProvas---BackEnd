@@ -10,7 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 //Tests routes
-app.get("/api/tests", testsController.getTests);
+app.get("/api/tests/teacher/:id", testsController.getTestsByTeachers);
+app.get("/api/tests/subject/:id", testsController.getTestsBySubjects);
 
 //Teachers routes
 app.get("/api/teachers" , teachersController.getTeachers);
